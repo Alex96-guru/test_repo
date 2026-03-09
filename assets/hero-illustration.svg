@@ -1,0 +1,61 @@
+﻿<svg width="640" height="520" viewBox="0 0 640 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="panel" x1="86" y1="66" x2="468" y2="392" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF6ED"/>
+      <stop offset="1" stop-color="#F8E6D3"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="170" y1="126" x2="424" y2="352" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#25304A"/>
+      <stop offset="1" stop-color="#1D2638"/>
+    </linearGradient>
+    <linearGradient id="spark" x1="112" y1="78" x2="214" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E46E42"/>
+      <stop offset="1" stop-color="#F0C168"/>
+    </linearGradient>
+    <filter id="shadow" x="40" y="30" width="560" height="430" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="22"/>
+      <feGaussianBlur stdDeviation="22"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.178 0 0 0 0 0.129 0 0 0 0 0.086 0 0 0 0.18 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_2"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_2" result="shape"/>
+    </filter>
+  </defs>
+
+  <circle cx="470" cy="122" r="88" fill="#EAB8A6" fill-opacity="0.44"/>
+  <circle cx="128" cy="380" r="70" fill="#7EB8A7" fill-opacity="0.24"/>
+  <path d="M126 104L144 66L182 48L164 86L126 104Z" fill="url(#spark)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="92" y="74" width="396" height="278" rx="34" fill="url(#panel)"/>
+    <rect x="118" y="102" width="344" height="26" rx="13" fill="#FFFFFF" fill-opacity="0.82"/>
+    <circle cx="142" cy="115" r="5" fill="#E46E42"/>
+    <circle cx="160" cy="115" r="5" fill="#EFC06C"/>
+    <circle cx="178" cy="115" r="5" fill="#6EAD9C"/>
+    <rect x="140" y="146" width="300" height="178" rx="28" fill="url(#screen)"/>
+    <path d="M172 278C203 228 252 196 312 196C352 196 395 218 424 252" stroke="#F8E8D3" stroke-width="12" stroke-linecap="round"/>
+    <path d="M174 252C208 220 252 198 300 198C350 198 390 219 422 255" stroke="#2D7A71" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M178 254C214 232 253 221 296 221C341 221 378 232 413 256" stroke="#E46E42" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="300" cy="198" r="18" fill="#FFF3E6"/>
+    <path d="M286 198H314" stroke="#20304A" stroke-width="5" stroke-linecap="round"/>
+    <path d="M300 184V212" stroke="#20304A" stroke-width="5" stroke-linecap="round"/>
+    <rect x="170" y="287" width="90" height="16" rx="8" fill="#FFF3E6" fill-opacity="0.9"/>
+    <rect x="270" y="287" width="62" height="16" rx="8" fill="#6EAD9C" fill-opacity="0.95"/>
+    <rect x="340" y="287" width="56" height="16" rx="8" fill="#E7B59E" fill-opacity="0.95"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="366" y="254" width="160" height="118" rx="26" fill="#FFF7F0"/>
+    <text x="396" y="297" fill="#20304A" font-family="Arial, sans-serif" font-size="18" font-weight="700">Preview</text>
+    <rect x="396" y="314" width="100" height="12" rx="6" fill="#E7B59E"/>
+    <rect x="396" y="336" width="84" height="12" rx="6" fill="#6EAD9C"/>
+    <rect x="396" y="358" width="68" height="12" rx="6" fill="#20304A" fill-opacity="0.18"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="82" y="326" width="170" height="92" rx="24" fill="#FFF7F0"/>
+    <text x="110" y="365" fill="#20304A" font-family="Arial, sans-serif" font-size="18" font-weight="700">Pages Ready</text>
+    <path d="M112 386H216" stroke="#20304A" stroke-opacity="0.2" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>
