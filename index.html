@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Пример современного статического сайта для GitHub Pages и демонстрации деплоя."
+  />
+  <title>Northstar Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#hero">
+        <span class="brand-mark">N</span>
+        <span class="brand-text">Northstar Studio</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="#about">О проекте</a>
+        <a href="#work">Возможности</a>
+        <a href="#process">Процесс</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Пример сайта без сборки</p>
+          <h1>Аккуратный лендинг, который можно сразу залить на GitHub Pages.</h1>
+          <p class="hero-text">
+            Подходит как стартовая точка для портфолио, тестового задания или первой публичной страницы проекта.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Запустить проект</a>
+            <a class="button button-secondary" href="#work">Посмотреть блоки</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-grid"></div>
+          <div class="hero-metric">
+            <span>deploy-ready</span>
+            <strong>Static Site</strong>
+          </div>
+          <ul class="hero-list">
+            <li>Чистый HTML, CSS и JS</li>
+            <li>Адаптивный интерфейс</li>
+            <li>Подходит для GitHub Pages</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">О проекте</p>
+          <h2>Сайт выглядит живо, но остается максимально простым в поддержке.</h2>
+        </div>
+        <div class="about-grid">
+          <article>
+            <h3>Быстрый старт</h3>
+            <p>Открыл репозиторий, включил GitHub Pages, получил рабочую публичную ссылку без сложной инфраструктуры.</p>
+          </article>
+          <article>
+            <h3>Нормальная эстетика</h3>
+            <p>Не шаблон из 2018 года: выразительная типографика, слоистый фон, читаемая сетка и спокойная анимация.</p>
+          </article>
+          <article>
+            <h3>Удобно расширять</h3>
+            <p>Можно превратить в портфолио, страницу продукта, визитку агентства или демо для собеседований.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="work section" id="work">
+        <div class="section-heading compact">
+          <p class="eyebrow">Возможности</p>
+          <h2>Что уже включено в шаблон</h2>
+        </div>
+        <div class="cards-grid">
+          <article class="feature-card accent-sand">
+            <span class="feature-index">01</span>
+            <h3>Hero-блок</h3>
+            <p>С сильным заголовком, CTA-кнопками и визуальным блоком справа.</p>
+          </article>
+          <article class="feature-card accent-blue">
+            <span class="feature-index">02</span>
+            <h3>Контентные секции</h3>
+            <p>Готовые карточки и блоки, которые легко заменить своим текстом.</p>
+          </article>
+          <article class="feature-card accent-green">
+            <span class="feature-index">03</span>
+            <h3>Адаптив</h3>
+            <p>Сайт хорошо выглядит на ноутбуке, планшете и обычном телефоне.</p>
+          </article>
+          <article class="feature-card accent-rose">
+            <span class="feature-index">04</span>
+            <h3>Минимум JS</h3>
+            <p>Только мобильное меню, плавный скролл и несколько приятных деталей.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="process section" id="process">
+        <div class="section-heading compact">
+          <p class="eyebrow">Процесс</p>
+          <h2>Как обычно используют такой шаблон</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>Шаг 1</span>
+            <h3>Меняют тексты</h3>
+            <p>Подставляют название проекта, описание, ссылки и нужные CTA.</p>
+          </article>
+          <article>
+            <span>Шаг 2</span>
+            <h3>Добавляют контент</h3>
+            <p>Портфолио, услуги, FAQ, форму обратной связи или блок с кейсами.</p>
+          </article>
+          <article>
+            <span>Шаг 3</span>
+            <h3>Публикуют на GitHub</h3>
+            <p>Заливают в репозиторий и включают GitHub Pages в настройках проекта.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="contact-panel">
+          <div>
+            <p class="eyebrow">Контакты</p>
+            <h2>Можно использовать как базовую витрину проекта уже сегодня.</h2>
+          </div>
+          <a class="button button-primary" href="mailto:hello@example.com">hello@example.com</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Northstar Studio</p>
+      <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
