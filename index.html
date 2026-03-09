@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Пример современного статического сайта для GitHub Pages и демонстрации деплоя."
+    content="Northstar Studio - многостраничный демо-сайт для GitHub Pages и локального Node-сервера."
   />
   <title>Northstar Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,10 +16,10 @@
   />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body data-page="home">
   <div class="page-shell">
     <header class="site-header">
-      <a class="brand" href="#hero">
+      <a class="brand" href="index.html">
         <span class="brand-mark">N</span>
         <span class="brand-text">Northstar Studio</span>
       </a>
@@ -30,10 +30,10 @@
       </button>
 
       <nav class="site-nav" aria-label="Основная навигация">
-        <a href="#about">О проекте</a>
-        <a href="#work">Возможности</a>
-        <a href="#process">Процесс</a>
-        <a href="#contact">Контакты</a>
+        <a href="index.html" data-nav="home">Главная</a>
+        <a href="services.html" data-nav="services">Услуги</a>
+        <a href="projects.html" data-nav="projects">Проекты</a>
+        <a href="contact.html" data-nav="contact">Контакты</a>
       </nav>
     </header>
 
@@ -41,13 +41,29 @@
       <section class="hero" id="hero">
         <div class="hero-copy">
           <p class="eyebrow">Пример сайта без сборки</p>
-          <h1>Аккуратный лендинг, который можно сразу залить на GitHub Pages.</h1>
+          <h1>Небольшой многостраничный сайт для демо, GitHub и локального сервера.</h1>
           <p class="hero-text">
-            Подходит как стартовая точка для портфолио, тестового задания или первой публичной страницы проекта.
+            Этот шаблон показывает нормальную структуру проекта: несколько страниц, единый стиль,
+            адаптивный интерфейс и простую функцию с SQLite для заявок.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#contact">Запустить проект</a>
-            <a class="button button-secondary" href="#work">Посмотреть блоки</a>
+            <a class="button button-primary" href="contact.html">Оставить заявку</a>
+            <a class="button button-secondary" href="projects.html">Посмотреть страницы</a>
+          </div>
+
+          <div class="stat-strip" data-api-status>
+            <article>
+              <span>Страниц</span>
+              <strong>4</strong>
+            </article>
+            <article>
+              <span>Режим</span>
+              <strong data-api-mode>Static + Node</strong>
+            </article>
+            <article>
+              <span>Заявок в БД</span>
+              <strong data-stats-count>...</strong>
+            </article>
           </div>
         </div>
 
@@ -62,8 +78,8 @@
           </div>
           <ul class="hero-list">
             <li>Чистый HTML, CSS и JS</li>
-            <li>Адаптивный интерфейс</li>
-            <li>Подходит для GitHub Pages</li>
+            <li>3 дополнительные страницы</li>
+            <li>SQLite при запуске через Node</li>
           </ul>
         </div>
       </section>
@@ -71,84 +87,95 @@
       <section class="about section" id="about">
         <div class="section-heading">
           <p class="eyebrow">О проекте</p>
-          <h2>Сайт выглядит живо, но остается максимально простым в поддержке.</h2>
+          <h2>Сайт выглядит как маленький реальный продукт, а не просто как пустая заглушка.</h2>
         </div>
         <div class="about-grid">
           <article>
-            <h3>Быстрый старт</h3>
-            <p>Открыл репозиторий, включил GitHub Pages, получил рабочую публичную ссылку без сложной инфраструктуры.</p>
+            <h3>Главная страница</h3>
+            <p>Знакомит с проектом, показывает архитектуру и дает быстрые переходы по ключевым разделам.</p>
           </article>
           <article>
-            <h3>Нормальная эстетика</h3>
-            <p>Не шаблон из 2018 года: выразительная типографика, слоистый фон, читаемая сетка и спокойная анимация.</p>
+            <h3>Услуги и проекты</h3>
+            <p>Отдельные страницы полезны и для навигации, и для будущего SEO, и просто как пример нормальной структуры.</p>
           </article>
           <article>
-            <h3>Удобно расширять</h3>
-            <p>Можно превратить в портфолио, страницу продукта, визитку агентства или демо для собеседований.</p>
+            <h3>Контакты с БД</h3>
+            <p>Форма пишет данные в SQLite через локальный Node-сервер. Это уже не только верстка, а рабочий сценарий.</p>
           </article>
         </div>
       </section>
 
       <section class="work section" id="work">
         <div class="section-heading compact">
-          <p class="eyebrow">Возможности</p>
-          <h2>Что уже включено в шаблон</h2>
+          <p class="eyebrow">Разделы</p>
+          <h2>Что уже есть в этом демо</h2>
         </div>
         <div class="cards-grid">
           <article class="feature-card accent-sand">
             <span class="feature-index">01</span>
-            <h3>Hero-блок</h3>
-            <p>С сильным заголовком, CTA-кнопками и визуальным блоком справа.</p>
+            <h3>Главная</h3>
+            <p>Hero-блок, секции с преимуществами, статистика и ссылки на остальные страницы.</p>
+            <a class="text-link" href="index.html">Открыть страницу</a>
           </article>
           <article class="feature-card accent-blue">
             <span class="feature-index">02</span>
-            <h3>Контентные секции</h3>
-            <p>Готовые карточки и блоки, которые легко заменить своим текстом.</p>
+            <h3>Услуги</h3>
+            <p>Карточки с пакетами и объяснение рабочего процесса в более предметном формате.</p>
+            <a class="text-link" href="services.html">Открыть страницу</a>
           </article>
           <article class="feature-card accent-green">
             <span class="feature-index">03</span>
-            <h3>Адаптив</h3>
-            <p>Сайт хорошо выглядит на ноутбуке, планшете и обычном телефоне.</p>
+            <h3>Проекты</h3>
+            <p>Примеры кейсов и блок с готовыми направлениями, которые можно развивать дальше.</p>
+            <a class="text-link" href="projects.html">Открыть страницу</a>
           </article>
           <article class="feature-card accent-rose">
             <span class="feature-index">04</span>
-            <h3>Минимум JS</h3>
-            <p>Только мобильное меню, плавный скролл и несколько приятных деталей.</p>
+            <h3>Контакты</h3>
+            <p>Форма заявки с отправкой в локальную SQLite-базу и чтением последних записей.</p>
+            <a class="text-link" href="contact.html">Открыть страницу</a>
           </article>
         </div>
       </section>
 
       <section class="process section" id="process">
         <div class="section-heading compact">
-          <p class="eyebrow">Процесс</p>
-          <h2>Как обычно используют такой шаблон</h2>
+          <p class="eyebrow">Как использовать</p>
+          <h2>Шаблон уже готов к нормальной доработке</h2>
         </div>
         <div class="timeline">
           <article>
             <span>Шаг 1</span>
-            <h3>Меняют тексты</h3>
-            <p>Подставляют название проекта, описание, ссылки и нужные CTA.</p>
+            <h3>Меняют контент</h3>
+            <p>Название, тексты, CTA, контакты и сами страницы под конкретный проект.</p>
           </article>
           <article>
             <span>Шаг 2</span>
-            <h3>Добавляют контент</h3>
-            <p>Портфолио, услуги, FAQ, форму обратной связи или блок с кейсами.</p>
+            <h3>Расширяют функциональность</h3>
+            <p>Добавляют отправку писем, авторизацию, API, админку или более серьезный backend.</p>
           </article>
           <article>
             <span>Шаг 3</span>
-            <h3>Публикуют на GitHub</h3>
-            <p>Заливают в репозиторий и включают GitHub Pages в настройках проекта.</p>
+            <h3>Публикуют</h3>
+            <p>Статику выкладывают на GitHub Pages, а backend-часть при желании разворачивают отдельно.</p>
           </article>
         </div>
       </section>
 
-      <section class="contact section" id="contact">
-        <div class="contact-panel">
+      <section class="contact section" id="contact-preview">
+        <div class="contact-panel split-panel">
           <div>
-            <p class="eyebrow">Контакты</p>
-            <h2>Можно использовать как базовую витрину проекта уже сегодня.</h2>
+            <p class="eyebrow">Backend demo</p>
+            <h2>Для примера уже есть рабочая форма с сохранением заявок.</h2>
+            <p class="panel-note">
+              На GitHub Pages она будет работать только как статическая демонстрация интерфейса.
+              Для записи в БД запускай сайт через `npm start`.
+            </p>
           </div>
-          <a class="button button-primary" href="mailto:hello@example.com">hello@example.com</a>
+          <div class="panel-actions">
+            <a class="button button-primary" href="contact.html">Перейти к форме</a>
+            <a class="button button-secondary" href="services.html">Посмотреть услуги</a>
+          </div>
         </div>
       </section>
     </main>
@@ -162,5 +189,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
